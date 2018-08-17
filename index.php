@@ -32,7 +32,7 @@ session_start();
 		}
 		else 
 		{
-			echo "enter a valid email";
+			echo "enter a valid email" ;
 		}
 
 		
