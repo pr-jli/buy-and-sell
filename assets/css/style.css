@@ -1,0 +1,287 @@
+  @import url('https://fonts.googleapis.com/css?family=Allerta');
+
+ @import url('https://fonts.googleapis.com/css?family=Lekton+Bold');
+
+ @import url('https://fonts.googleapis.com/css?family=Quicksant');
+  @import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+
+.container1 {
+    color: white;
+    font-size: 60px;
+
+
+}
+.top-left {
+    position: absolute;
+    top: 45px;
+    left: 16px;
+}
+
+.top-right {
+    position: absolute;
+    top: 45px;
+    right: 16px;
+}
+
+p{  float: left;
+    color: black;
+    font-family: Courier New, monospace; 
+    text-decoration: none;
+}
+
+#b1,#b2{
+    background-color:#80D8FF;
+    width: 150px;
+    height: 45px;
+    color: white;
+    border:1px solid #707070;
+    border-radius: 0;   
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Lekton Bold;
+      
+}
+#b3,#b4{
+    background-color: black;
+    position: absolute; 
+    transition: .5s ease; 
+    top: 95%;
+     text-decoration: none!important;
+    color: white!important;
+    border:1px solid black;
+    border: auto;
+    font-size: 17px;
+    cursor: pointer;
+}
+#b3{
+     position: absolute; 
+    transition: .5s ease; 
+    left: 2%;
+}
+#b4{
+    
+     position: absolute; 
+    transition: .5s ease; 
+    left:85%;
+    font-size: 17px;
+}
+
+#b2{
+    position: absolute; 
+    transition: .5s ease; 
+    top: 44%;
+    left: 87%;
+    }
+#b1{
+    position: absolute; 
+    transition: .5s ease; 
+    top: 57%;
+    left: 87%;
+    }
+
+
+       
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            
+            padding: 20px;
+            border: 1px solid #888;
+            border-radius: 0px;
+            width: 70%;
+
+        }
+
+
+        #textboxid {border-radius: 0px; width: 253px; height: 35px; font-size:12pt; background-color: #eeeeee}
+        #subb, #logg{border-radius: 0px; width: 150px; height: 42px; color: white; background-color:#80D8FF; font-size: 20pt;}
+        /* The Close Button */
+        .close {
+           color: white;
+                float: right !important;
+    margin-right: -28px !important;
+    margin-top: -42px !important;
+    background-color: #DCDCDC !important;
+    border-radius: 15px;
+    opacity: 1 !important;
+    font-weight:bold;
+
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+       
+       
+        /* The Close Button */
+        .close {
+            color: white;
+            float: right;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+.container-fluid
+{ 
+ background-color: #0097a8;
+ height: auto;
+}
+
+#lf{
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    font-family: Allerta;
+
+}
+
+#p1,#p2,#p3,#p4{
+        border: 2px solid #00838F;
+    border-radius: 0px;
+    color: white!important;
+    background-color: #00838F;
+    height: 360px;
+    width: 247px;
+    font-size: 20px;
+    text-align: center;
+    }
+#p1{
+     position: absolute; 
+    transition: .5s ease; 
+    top: 20%;
+    left:7%;
+
+}
+#p2
+{
+     position: absolute; 
+    transition: .5s ease; 
+    top: 20%;
+    left:30%;
+
+}
+#p3{
+     position: absolute; 
+    transition: .5s ease; 
+    top: 20%;
+    right: 30%;
+
+}
+#p4{
+     position: absolute; 
+    transition: .5s ease; 
+    top: 20%;
+    right: 7%;
+
+}
+
+#hh{
+    background-color:#00838F;
+    border:1px solid #00838F;
+    width: 245px;
+    height: auto;
+    color: white;
+    cursor: pointer;
+    
+}
+#ss{ background-color:rgb(100, 157, 242);opacity:0.5;}
+   
+
+#abc{
+    font-size:65px;
+    margin: 25px;
+    margin-left: 20px;
+    color: white;
+    font-family: Allerta;
+}
+#logout{
+    float: right;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
+    text-decoration: none;
+    font: Allerta;
+}
+
+#margin1,#margin2{
+    margin-left: -450px;
+    margin-top: 58px;
+     font-size: 25px; 
+     text-decoration-color: white!important;
+    border-right: 4px solid #80CBC4;
+
+}
+#aa{
+    border-bottom: 4px solid #80CBC4;
+}
+
+#a1,#a11,#a2,#a22,#a3,#a33,#a4,#a44,#a5,#a55,#a6,#a66,#a7,#a77,#a8,#a88{
+    color: white;
+
+}
+#a1,#a2,#a3,#a4{
+    position: absolute; 
+    transition: .5s ease; 
+    top: 52%;}
+
+    #a11,#a22,#a33,#a44{
+    position: absolute; 
+    transition: .5s ease; 
+    top: 55%;}
+
+    #a5,#a6,#a7,#a8{
+        position: absolute; 
+    transition: .5s ease; 
+    top: 92%;
+    }
+    #a55,#a66,#a77,#a88{
+        position: absolute; 
+    transition: .5s ease; 
+    top: 95%;
+    }
+
+    #a1,#a11,#a5,#a55{
+        position: absolute; 
+    transition: .5s ease; 
+    left: 20%;
+    }
+    #a2,#a22,#a6,#a66
+    {
+        position: absolute; 
+    transition: .5s ease; 
+    left: 38%;
+    }
+
+    #a3,#a33,#a7,#a77{
+        position: absolute; 
+    transition: .5s ease; 
+    left: 56%;
+    }
+    #a4,#a44,#a8,#a88{
+        position: absolute; 
+    transition: .5s ease; 
+    left: 74%;
+    
+    }
+
+    #borde{
+        height: 500px;
+        border-left: 8px solid #00796B;
+        border-top:  8px solid #00796B;
+        width: 210px;
+
+        border-right: 8px solid #00796B ;
+         }
+   
