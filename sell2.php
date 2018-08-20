@@ -60,4 +60,4 @@ if ($uploadOk == 0) {
 }
 mysqli_close($db);
 
-?>
+
