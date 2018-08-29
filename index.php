@@ -1,12 +1,12 @@
 <?php
 session_start();
   $db= mysqli_connect('localhost','root','','users');
-  $username=$MobileNo=$year=$email=$password=$cnfpassword=$errpass= $erremail=$errusername="";
+  $username=$MobileNo=$year=$email=$password=$cnfpassword=$errpass= $erremail=$errusername=$errlength=$errnumber="";
   if(isset($_POST['username']))
   { 
 
   	$username=mysqli_real_escape_string($db,$_POST['username']);
-		$MobileNo=$_POST['MobileNo'];
+		$MobileNo=mysqli_real_escape_string($db,$_POST['MobileNo']);
 		$year=mysqli_real_escape_string($db,$_POST['year']);
 		$email=mysqli_real_escape_string($db,$_POST['email']);
 		$password=md5($_POST['password']);
@@ -29,14 +29,21 @@ session_start();
 		
 				else
 				{
-
-
-			
-						mysqli_query($db,"INSERT INTO accounts(username, MobileNo , year, email,password) 
-						VALUES('$username','$MobileNo','$year','$email','$password')");
-						$SESSION['username']=$username;
-						
-						 header("location:page1.php");
+            if (is_numeric($MobileNo))
+             {
+                if(strlen($MobileNo)==10 && $MobileNo{0}!==0 && strlen($year)==1 && strlen($email)<100  )
+                {
+                  mysqli_query($db,"INSERT INTO accounts(username, MobileNo , year, email,password) 
+						      VALUES('$username','$MobileNo','$year','$email','$password')");
+						      $SESSION['username']=$username;
+						    
+						      header("location:page1.php");
+                }
+                else
+                $errlength="The length limit exceeded";
+              }
+              else
+              $errnumber="enter the mobile no. in numeric format";
 				}
 		}
 		else 
@@ -157,20 +164,24 @@ session_start();
         <br>
         <span class="error"> <?php echo $errusername;?></span> 
 			<br><br>
-            <input id="textboxid" type="text" placeholder="  Mobile Number" maxlength="10" name="MobileNo" pattern="[1-9]{1}[0-9]{9}" required/>
+            <input id="textboxid" type="text" placeholder="  Mobile Number"  name="MobileNo"  required/>
+        <br>
+            <span class="error"> <?php echo $errnumber;?></span> 
 			<br><br>
      	    <input id="textboxid" type="number" placeholder="  Year You are in (1,2,3,4)" min="1" max="4" step="1" maxlength="1" name="year"  required/>
+          <br>
+          <span class="error"> <?php echo $errlength;?></span> 
 			<br><br>            
 			<input id="textboxid" type= "email" placeholder="  E-mail" name="email" maxlength="100" required/>
       <br>
-      <span class="error"> <?php echo $erremail;?></span>
+      <span class="error"> <?php echo $erremail; echo $errlength ;?></span>
      	    <br><br>
     		<input id="textboxid" type = "password" placeholder="  Password" name="password" 
          pattern=".{6,}" title="Six or more characters" required/>
-            <br><br>
+            <br><br><br>
    		    <input id="textboxid" type = "password" placeholder="  Confirm Password" name="cnfpassword" required/>
           <br>
-          <span class="error"> <?php echo $errpass;?></span>
+          <span class="error"> <?php echo $errpass; echo $errlength ;?></span>
   `			<br>
  			<br>
  			<input id="subb" type = "submit" name = "submit" value = "Submit">
